@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TeleLab</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- ==========================
+         Navigation
+    ========================== -->
+
+    <nav>
+
+        <div class="logo">
+            TeleLab
+        </div>
+
+    </nav>
+
+    <!-- ==========================
+         Hero Section
+    ========================== -->
+
+    <section class="hero">
+
+        <h1>Salesforce Chat Integration Lab</h1>
+
+        <p>
+            Welcome to TeleLab.
+            Learn, build and demonstrate Salesforce, Talkdesk,
+            AI and Customer Service integrations.
+        </p>
+
+        <button id="chatButton">
+            Start Chat
+        </button>
+
+    </section>
+
+    <!-- ==========================
+         Footer
+    ========================== -->
+
+    <footer>
+
+        © 2026 TeleLab.in
+
+    </footer>
+
+    <!-- JavaScript -->
+
+
+<script type="text/javascript">
+function initEmbeddedMessaging() {
+
+    try {
+
+        embeddedservice_bootstrap.settings.language = 'en_US';
+
+        embeddedservice_bootstrap.init(
+            '00Dbm00000r4Dkv',
+            'Customer_Web_Chat',
+            'https://orgfarm-224685c77e-dev-ed.develop.my.site.com/ESWCustomerWebChat1785598660035',
+            {
+                scrt2URL: 'https://orgfarm-224685c77e-dev-ed.develop.my.salesforce-scrt.com'
+            }
+        );
+
+    } catch (err) {
+
+        console.error('Error loading Embedded Messaging: ', err);
+
+    }
+
+}
+</script>
+
+<script
+    type="text/javascript"
+    src="https://orgfarm-224685c77e-dev-ed.develop.my.site.com/ESWCustomerWebChat1785598660035/assets/js/bootstrap.min.js"
+    onload="initEmbeddedMessaging()">
+</script>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
