@@ -487,3 +487,121 @@ footer{
     }
 
 }
+
+/* ==========================
+   Cards Section
+========================== */
+
+.cards {
+
+    width: 1100px;
+    max-width: 90%;
+
+    margin: 0 auto 80px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 24px;
+
+}
+
+
+/* ==========================
+   Card
+========================== */
+
+.card {
+
+    padding: 30px;
+
+    background: #111827;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 12px;
+
+    min-height: 230px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    transition: .3s;
+
+}
+
+
+.card:hover {
+
+    transform: translateY(-5px);
+
+    border-color: #38bdf8;
+
+}
+
+
+/* Card Heading */
+
+.card h2 {
+
+    font-size: 24px;
+
+    margin-bottom: 18px;
+
+    color: #38bdf8;
+
+}
+
+
+/* Card Description */
+
+.card p {
+
+    font-size: 16px;
+
+    line-height: 1.6;
+
+    color: #cbd5e1;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* Card Link */
+
+.card a {
+
+    margin-top: auto;
+
+    color: #38bdf8;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+}
+
+
+.card a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+/* ==========================
+   Mobile
+========================== */
+
+@media (max-width: 900px) {
+
+    .cards {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
