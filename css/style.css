@@ -605,3 +605,79 @@ footer{
     }
 
 }
+
+/* ==========================
+   Fundamentals Content
+========================== */
+
+.content-section {
+
+    max-width: 1000px;
+
+    margin: 80px auto;
+
+    padding: 40px;
+
+}
+
+.content-section h2 {
+
+    font-size: 36px;
+
+    margin-bottom: 25px;
+
+    color: #38bdf8;
+
+}
+
+.content-section p {
+
+    font-size: 19px;
+
+    line-height: 1.7;
+
+    color: #cbd5e1;
+
+    margin-bottom: 20px;
+
+}
+
+.info-box {
+
+    margin-top: 35px;
+
+    padding: 30px;
+
+    background: #111827;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 12px;
+
+}
+
+.info-box h3 {
+
+    font-size: 25px;
+
+    color: #38bdf8;
+
+    margin-bottom: 20px;
+
+}
+
+.info-box ol {
+
+    padding-left: 25px;
+
+}
+
+.info-box li {
+
+    font-size: 18px;
+
+    color: #cbd5e1;
+
+    margin-bottom: 12px;
+
+}
