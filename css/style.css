@@ -681,3 +681,117 @@ footer{
     margin-bottom: 12px;
 
 }
+
+/* ==========================
+   Web Chat Fundamentals
+   Content
+========================== */
+
+.content {
+    width: 1100px;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 60px 0 100px;
+}
+
+.content-card {
+    background: #111827;
+    border: 1px solid #1e293b;
+    border-radius: 14px;
+    padding: 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.20);
+}
+
+.content-card h2 {
+    color: #38bdf8;
+    font-size: 28px;
+    margin-bottom: 18px;
+}
+
+.content-card p {
+    color: #cbd5e1;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.content-card ul {
+    margin-top: 15px;
+    padding-left: 25px;
+}
+
+.content-card li {
+    color: #cbd5e1;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+/* ==========================
+   Customer Journey Flow
+========================== */
+
+.flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.flow div {
+    background: #0f172a;
+    border: 1px solid #38bdf8;
+    color: #38bdf8;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.flow span {
+    color: #94a3b8;
+    font-size: 24px;
+}
+
+/* ==========================
+   Highlight Card
+========================== */
+
+.content-card.highlight {
+    border-left: 4px solid #38bdf8;
+}
+
+/* ==========================
+   Responsive Design
+========================== */
+
+@media (max-width: 768px) {
+
+    .content {
+        max-width: 92%;
+        padding-top: 40px;
+    }
+
+    .content-card {
+        padding: 22px;
+    }
+
+    .content-card h2 {
+        font-size: 24px;
+    }
+
+    .content-card p,
+    .content-card li {
+        font-size: 16px;
+    }
+
+    .flow {
+        flex-direction: column;
+    }
+
+    .flow span {
+        transform: rotate(90deg);
+    }
+
+}
