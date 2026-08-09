@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
@@ -8,8 +7,9 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Web Chat Agent - TeleLab</title>
+    <title>TeleLab - Agent Experience</title>
 
+    <!-- Main TeleLab stylesheet -->
     <link rel="stylesheet" href="../../../css/style.css">
 
 </head>
@@ -18,7 +18,7 @@
 
     <!-- =========================
          Navigation
-         ========================= -->
+    ========================== -->
 
     <nav>
 
@@ -32,16 +32,12 @@
 
         <div class="nav-links">
 
+            <a href="../../index.html">
+                Salesforce
+            </a>
+
             <a href="../../../index.html">
                 Home
-            </a>
-
-            <a href="../">
-                Web Chat
-            </a>
-
-            <a href="../../../salesforce/">
-                Salesforce
             </a>
 
         </div>
@@ -51,87 +47,63 @@
 
     <!-- =========================
          Hero
-         ========================= -->
+    ========================== -->
 
-    <header class="hero">
+    <section class="salesforce-hero">
 
-        <h1>Web Chat Agent</h1>
+        <h1>Agent Experience</h1>
 
         <p>
-            Understand how Salesforce service agents become eligible
-            to receive Web Chat conversations through Omni-Channel.
+            Understand what happens on the service agent side
+            when Salesforce receives and routes customer work.
         </p>
 
-    </header>
+    </section>
 
 
     <!-- =========================
          Main Content
-         ========================= -->
+    ========================== -->
 
     <main class="content">
 
 
         <!-- =========================
-             What is a Service Agent?
-             ========================= -->
+             What Is Agent Experience?
+        ========================== -->
 
         <section class="content-card">
 
-            <h2>What is a Service Agent?</h2>
+            <h2>What Is the Agent Experience?</h2>
 
             <p>
-                A service agent is the person who handles customer
-                conversations and provides assistance to customers.
+                The agent experience describes what happens after
+                customer work reaches Salesforce and becomes available
+                to a service agent.
             </p>
 
             <p>
-                In Salesforce, an agent can receive customer work
-                through Omni-Channel when the required configuration
-                and availability conditions are satisfied.
-            </p>
-
-        </section>
-
-
-        <!-- =========================
-             How an Agent Receives Web Chat
-             ========================= -->
-
-        <section class="content-card">
-
-            <h2>How an Agent Receives Web Chat</h2>
-
-            <p>
-                A Web Chat conversation is not normally sent directly
-                to a specific agent. Salesforce evaluates the routing
-                configuration and determines which eligible agent
-                should receive the conversation.
+                Depending on the channel and integration, an agent may
+                receive Web Chat conversations, voice calls, cases or
+                other customer-service work through the Salesforce
+                service workspace.
             </p>
 
             <div class="flow">
 
-                <span>Customer</span>
+                <div>Customer</div>
 
-                <span class="flow-arrow">→</span>
+                <span>→</span>
 
-                <span>Web Chat</span>
+                <div>Channel</div>
 
-                <span class="flow-arrow">→</span>
+                <span>→</span>
 
-                <span>Routing</span>
+                <div>Routing</div>
 
-                <span class="flow-arrow">→</span>
+                <span>→</span>
 
-                <span>Queue</span>
-
-                <span class="flow-arrow">→</span>
-
-                <span>Omni-Channel</span>
-
-                <span class="flow-arrow">→</span>
-
-                <span>Agent</span>
+                <div>Agent</div>
 
             </div>
 
@@ -139,162 +111,396 @@
 
 
         <!-- =========================
-             Agent Eligibility
-             ========================= -->
+             Agent Presence
+        ========================== -->
 
         <section class="content-card">
 
-            <h2>Agent Eligibility</h2>
+            <h2>Agent Presence</h2>
 
             <p>
-                An agent must meet the required conditions before
-                Salesforce can deliver a Web Chat conversation.
+                Agent presence determines whether an agent is currently
+                available to receive new work through Omni-Channel.
             </p>
 
             <p>
-                These conditions can include queue membership,
-                Omni-Channel presence and available capacity.
+                An agent can be logged into Salesforce and still be
+                unavailable for a particular type of work if their
+                Omni-Channel presence status does not allow new work.
             </p>
 
-        </section>
+            <ul>
 
+                <li>
+                    <strong>Available</strong> — The agent can receive eligible work.
+                </li>
 
-        <!-- =========================
-             Queue Membership
-             ========================= -->
+                <li>
+                    <strong>Busy</strong> — The agent should not receive new work.
+                </li>
 
-        <section class="content-card">
+                <li>
+                    <strong>On Break</strong> — The agent is temporarily unavailable.
+                </li>
 
-            <h2>Queue Membership</h2>
-
-            <p>
-                The agent must be a member of the queue that receives
-                the Web Chat conversation.
-            </p>
-
-            <p>
-                Queue membership identifies which agents are eligible
-                to handle the type of work assigned to that queue.
-            </p>
-
-        </section>
-
-
-        <!-- =========================
-             Omni-Channel Presence
-             ========================= -->
-
-        <section class="content-card">
-
-            <h2>Omni-Channel Presence</h2>
-
-            <p>
-                Omni-Channel presence indicates whether an agent is
-                available to receive new work.
-            </p>
-
-            <p>
-                If an agent is offline, unavailable or otherwise not
-                eligible to receive work, Omni-Channel will not normally
-                deliver a new Web Chat conversation to that agent.
-            </p>
+            </ul>
 
         </section>
 
 
         <!-- =========================
              Agent Capacity
-             ========================= -->
+        ========================== -->
 
         <section class="content-card">
 
             <h2>Agent Capacity</h2>
 
             <p>
-                Omni-Channel can consider the amount of work an agent
-                is already handling when determining whether the agent
-                can receive another conversation.
+                Salesforce Omni-Channel also considers how much work
+                an agent is already handling.
             </p>
 
             <p>
-                Capacity helps prevent an agent from being assigned
-                more work than they are configured to handle.
+                Capacity prevents Salesforce from assigning additional
+                work when the agent has reached the configured limit.
+            </p>
+
+            <div class="flow">
+
+                <div>Agent</div>
+
+                <span>→</span>
+
+                <div>Current Work</div>
+
+                <span>+</span>
+
+                <div>New Work</div>
+
+                <span>→</span>
+
+                <div>Capacity Check</div>
+
+            </div>
+
+            <p>
+                If the agent has reached their configured capacity,
+                new work can remain in the queue until another eligible
+                agent becomes available.
             </p>
 
         </section>
 
 
         <!-- =========================
-             When the Agent Receives the Chat
-             ========================= -->
-
-        <section class="content-card">
-
-            <h2>When the Agent Receives the Chat</h2>
-
-            <p>
-                When an eligible agent is available, Omni-Channel can
-                deliver the Web Chat conversation to that agent.
-            </p>
-
-            <p>
-                The agent can then accept the work and begin
-                communicating with the customer.
-            </p>
-
-        </section>
-
-
-        <!-- =========================
-             Agent and Omni-Channel
-             ========================= -->
-
-        <section class="content-card">
-
-            <h2>Agent and Omni-Channel</h2>
-
-            <p>
-                Omni-Channel acts as the delivery mechanism between
-                customer work and available service agents.
-            </p>
-
-            <p>
-                The queue identifies the group of agents who can handle
-                the work, while Omni-Channel determines which eligible
-                agent should receive it.
-            </p>
-
-        </section>
-
-
-        <!-- =========================
-             What We Will Configure
-             ========================= -->
+             Web Chat
+        ========================== -->
 
         <section class="content-card highlight">
 
-            <h2>What We Will Configure in TeleLab</h2>
+            <h2>When an Agent Receives Web Chat</h2>
 
             <p>
-                In the hands-on labs, we will configure a service agent
-                so that the agent can receive Web Chat conversations.
+                When a customer starts a Web Chat conversation,
+                Salesforce evaluates the configured Omni-Channel
+                routing and looks for an eligible agent.
+            </p>
+
+            <div class="flow">
+
+                <div>Customer</div>
+
+                <span>→</span>
+
+                <div>Web Chat</div>
+
+                <span>→</span>
+
+                <div>Queue</div>
+
+                <span>→</span>
+
+                <div>Omni-Channel</div>
+
+                <span>→</span>
+
+                <div>Agent</div>
+
+            </div>
+
+            <p>
+                The conversation can then appear in the agent's
+                Omni-Channel workspace, where the agent can accept
+                and handle the customer interaction.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             Incoming Call
+        ========================== -->
+
+        <section class="content-card">
+
+            <h2>When an Agent Receives an Incoming Call</h2>
+
+            <p>
+                In a contact-center environment, an incoming customer
+                call can pass through several components before reaching
+                an available agent.
+            </p>
+
+            <div class="flow">
+
+                <div>Customer Call</div>
+
+                <span>→</span>
+
+                <div>Talkdesk</div>
+
+                <span>→</span>
+
+                <div>IVR</div>
+
+                <span>→</span>
+
+                <div>Queue</div>
+
+                <span>→</span>
+
+                <div>Agent</div>
+
+            </div>
+
+            <p>
+                Depending on the integration, the agent can handle
+                the interaction while working with customer information
+                and service records in Salesforce.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             CTI
+        ========================== -->
+
+        <section class="content-card">
+
+            <h2>CTI and the Agent Workspace</h2>
+
+            <p>
+                Computer Telephony Integration (CTI) connects
+                telephony functionality with the agent's business
+                application.
+            </p>
+
+            <p>
+                Depending on the integration, agents may be able to
+                answer calls, make outbound calls, change their
+                availability and manage customer interactions from
+                within the Salesforce environment.
+            </p>
+
+            <div class="flow">
+
+                <div>Talkdesk</div>
+
+                <span>→</span>
+
+                <div>CTI</div>
+
+                <span>→</span>
+
+                <div>Salesforce</div>
+
+                <span>→</span>
+
+                <div>Agent</div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             Customer Context
+        ========================== -->
+
+        <section class="content-card">
+
+            <h2>Customer Context and Screen Pop</h2>
+
+            <p>
+                One of the important benefits of integrating a
+                contact-center platform with Salesforce is the ability
+                to connect customer interactions with CRM information.
+            </p>
+
+            <p>
+                Depending on the configuration, an incoming interaction
+                may allow the agent to locate a customer record,
+                contact or case associated with the interaction.
+            </p>
+
+            <div class="flow">
+
+                <div>Customer Interaction</div>
+
+                <span>→</span>
+
+                <div>Customer Information</div>
+
+                <span>→</span>
+
+                <div>Salesforce Record</div>
+
+                <span>→</span>
+
+                <div>Agent</div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             Agent Workflow
+        ========================== -->
+
+        <section class="content-card highlight">
+
+            <h2>Typical Agent Workflow</h2>
+
+            <p>
+                The exact workflow depends on the Salesforce and
+                contact-center configuration, but the overall process
+                can be represented as follows:
+            </p>
+
+            <div class="flow">
+
+                <div>Customer</div>
+
+                <span>→</span>
+
+                <div>Interaction</div>
+
+                <span>→</span>
+
+                <div>Routing</div>
+
+                <span>→</span>
+
+                <div>Agent</div>
+
+                <span>→</span>
+
+                <div>Customer Record</div>
+
+                <span>→</span>
+
+                <div>Resolution</div>
+
+            </div>
+
+            <p>
+                The goal is to provide the agent with the right
+                interaction and the relevant customer context so the
+                customer can be assisted efficiently.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             Omni-Channel Eligibility
+        ========================== -->
+
+        <section class="content-card">
+
+            <h2>What Makes an Agent Eligible?</h2>
+
+            <p>
+                Being logged into Salesforce does not automatically
+                make an agent eligible for every type of customer work.
+            </p>
+
+            <p>
+                Omni-Channel evaluates multiple conditions before
+                offering work to an agent.
+            </p>
+
+            <div class="flow">
+
+                <div>Queue Membership</div>
+
+                <span>+</span>
+
+                <div>Presence</div>
+
+                <span>+</span>
+
+                <div>Capacity</div>
+
+                <span>+</span>
+
+                <div>Routing Rules</div>
+
+                <span>→</span>
+
+                <div>Eligible Agent</div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             What We Will Explore
+        ========================== -->
+
+        <section class="content-card highlight">
+
+            <h2>What We Will Explore in TeleLab</h2>
+
+            <p>
+                In future hands-on labs, we will explore how the
+                Salesforce agent experience works with Web Chat,
+                Omni-Channel and Talkdesk.
             </p>
 
             <ul>
 
-                <li>Create or use a Salesforce service agent</li>
+                <li>
+                    Understand agent presence
+                </li>
 
-                <li>Add the agent to the Web Chat queue</li>
+                <li>
+                    Understand Omni-Channel work delivery
+                </li>
 
-                <li>Configure Omni-Channel access</li>
+                <li>
+                    Test Web Chat delivery to an agent
+                </li>
 
-                <li>Configure agent presence</li>
+                <li>
+                    Explore CTI and voice interactions
+                </li>
 
-                <li>Understand agent capacity</li>
+                <li>
+                    Understand customer context and screen pop
+                </li>
 
-                <li>Test Web Chat delivery to the agent</li>
+                <li>
+                    Explore agent workflows in Salesforce
+                </li>
 
-                <li>Observe the conversation in Salesforce</li>
+                <li>
+                    Test customer interaction scenarios
+                </li>
 
             </ul>
 
@@ -303,16 +509,18 @@
 
         <!-- =========================
              Page Navigation
-             ========================= -->
+        ========================== -->
 
         <section class="page-navigation">
 
-            <a href="../queue/">
-                ← Web Chat Queue
+            <a href="../index.html">
+                ← Salesforce Web Chat
             </a>
 
-            <a href="../">
-                Back to Web Chat →
+            <br><br>
+
+            <a href="../../../index.html">
+                Back to TeleLab →
             </a>
 
         </section>
@@ -323,13 +531,14 @@
 
     <!-- =========================
          Footer
-         ========================= -->
+    ========================== -->
 
     <footer>
 
         © 2026 TeleLab.in
 
     </footer>
+
 
 </body>
 
