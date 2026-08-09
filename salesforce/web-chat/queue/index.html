@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Web Chat Queue - TeleLab</title>
+
+    <link rel="stylesheet" href="../../../css/style.css">
+
+</head>
+
+<body>
+
+
+<!-- ==========================
+     Navigation
+========================== -->
+
+<nav>
+
+    <div class="logo">
+
+        <a href="../../../index.html">
+            TeleLab
+        </a>
+
+    </div>
+
+
+    <div class="nav-links">
+
+        <a href="../../../index.html">
+            Home
+        </a>
+
+        <a href="../../index.html">
+            Web Chat
+        </a>
+
+        <a href="../../../salesforce/index.html">
+            Salesforce
+        </a>
+
+    </div>
+
+</nav>
+
+
+
+<!-- ==========================
+     Page Header
+========================== -->
+
+<section class="hero">
+
+    <h1>Web Chat Queue</h1>
+
+    <p>
+        Understand how Salesforce queues organize customer
+        conversations and help route work to service agents.
+    </p>
+
+</section>
+
+
+
+<!-- ==========================
+     Main Content
+========================== -->
+
+<section class="content">
+
+
+    <div class="content-card">
+
+        <h2>What is a Queue?</h2>
+
+        <p>
+            A Salesforce queue is a group of users or agents
+            who can receive and work on a particular type of
+            customer conversation or work item.
+        </p>
+
+        <p>
+            Instead of sending every conversation directly
+            to a specific agent, Salesforce can first place
+            the work into a queue.
+        </p>
+
+    </div>
+
+
+
+    <div class="content-card">
+
+        <h2>Why Use a Queue?</h2>
+
+        <p>
+            Queues help organizations distribute customer
+            conversations among multiple service agents.
+        </p>
+
+        <p>
+            This allows Salesforce to find an eligible and
+            available agent instead of requiring the customer
+            to be assigned to a specific person.
+        </p>
+
+    </div>
+
+
+
+    <div class="content-card">
+
+        <h2>How a Web Chat Reaches a Queue</h2>
+
+        <p>
+            When a customer starts a Web Chat conversation,
+            Salesforce can evaluate the configured routing
+            process and determine which queue should receive
+            the conversation.
+        </p>
+
+
+        <div class="flow">
+
+            <div>Customer</div>
+
+            <span>→</span>
+
+            <div>Web Chat</div>
+
+            <span>→</span>
+
+            <div>Routing</div>
+
+            <span>→</span>
+
+            <div>Queue</div>
+
+            <span>→</span>
+
+            <div>Agent</div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="content-card">
+
+        <h2>Queue Membership</h2>
+
+        <p>
+            Agents must be members of the appropriate queue
+            to receive work that is routed to that queue.
+        </p>
+
+        <p>
+            Queue membership works together with Omni-Channel
+            presence, routing configuration and agent capacity
+            to determine whether an agent can receive a
+            conversation.
+        </p>
+
+    </div>
+
+
+
+    <div class="content-card">
+
+        <h2>Queue and Omni-Channel</h2>
+
+        <p>
+            A queue identifies the group of agents who can
+            handle the work, while Omni-Channel helps determine
+            which eligible agent should receive the conversation.
+        </p>
+
+        <p>
+            The routing process therefore connects the customer
+            conversation, queue and available service agent.
+        </p>
+
+    </div>
+
+
+
+    <div class="content-card highlight">
+
+        <h2>What We Will Configure in TeleLab</h2>
+
+        <p>
+            In the hands-on labs, we will create and use a
+            Salesforce queue for Web Chat routing.
+        </p>
+
+        <ul>
+
+            <li>Create a Web Chat queue</li>
+
+            <li>Add service agents to the queue</li>
+
+            <li>Connect the queue to routing configuration</li>
+
+            <li>Configure Omni-Channel</li>
+
+            <li>Test queue-based Web Chat routing</li>
+
+            <li>Observe how conversations reach agents</li>
+
+        </ul>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- ==========================
+     Page Navigation
+========================== -->
+
+<section class="page-navigation">
+
+    <a href="../routing/">
+        ← Omni-Channel Routing
+    </a>
+
+    <a href="../">
+        Back to Web Chat →
+    </a>
+
+</section>
+
+
+
+<!-- ==========================
+     Footer
+========================== -->
+
+<footer>
+
+    © 2026 TeleLab.in
+
+</footer>
+
+
+</body>
+
+</html>
