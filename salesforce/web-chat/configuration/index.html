@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Salesforce Configuration - TeleLab</title>
+
+    <link rel="stylesheet" href="../../../css/style.css">
+
+</head>
+
+<body>
+
+
+<!-- ==========================
+     Navigation
+========================== -->
+
+<nav>
+
+    <div class="logo">
+
+        <a href="../../../index.html">
+            TeleLab
+        </a>
+
+    </div>
+
+
+    <div class="nav-links">
+
+        <a href="../../../index.html">
+            Home
+        </a>
+
+        <a href="../index.html">
+            Web Chat
+        </a>
+
+        <a href="../../../salesforce/index.html">
+            Salesforce
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- ==========================
+     Page Header
+========================== -->
+
+<section class="hero">
+
+    <h1>Salesforce Configuration</h1>
+
+    <p>
+        Learn how Salesforce Web Chat is configured,
+        how conversations are routed, and how agents
+        receive customer conversations.
+    </p>
+
+</section>
+
+
+<!-- ==========================
+     Main Content
+========================== -->
+
+<section class="content">
+
+
+    <div class="content-card">
+
+        <h2>Web Chat Configuration</h2>
+
+        <p>
+            Salesforce Web Chat requires several components
+            to work together before customers can start
+            conversations with service agents.
+        </p>
+
+        <p>
+            These components include the Web Chat deployment,
+            routing configuration, queues, Omni-Channel and
+            service agents.
+        </p>
+
+    </div>
+
+
+    <div class="content-card">
+
+        <h2>Web Chat Deployment</h2>
+
+        <p>
+            A Web Chat deployment defines how the chat
+            experience is made available to customers.
+        </p>
+
+        <p>
+            The deployment can contain settings that control
+            the customer-facing chat experience and connects
+            the website to Salesforce.
+        </p>
+
+    </div>
+
+
+    <div class="content-card">
+
+        <h2>Queue</h2>
+
+        <p>
+            A queue represents a group of agents who can
+            handle a particular type of customer conversation.
+        </p>
+
+        <p>
+            When a conversation is routed to a queue,
+            Salesforce can look for an available agent
+            who is a member of that queue.
+        </p>
+
+    </div>
+
+
+    <div class="content-card">
+
+        <h2>Routing Configuration</h2>
+
+        <p>
+            Routing configuration determines how work is
+            assigned to service agents.
+        </p>
+
+        <p>
+            It can define factors such as priority,
+            routing model and the amount of work an agent
+            can receive.
+        </p>
+
+    </div>
+
+
+    <div class="content-card">
+
+        <h2>Omni-Channel</h2>
+
+        <p>
+            Salesforce Omni-Channel manages the delivery
+            of customer conversations to available agents.
+        </p>
+
+        <p>
+            It considers the routing configuration,
+            queues, agent availability and workload when
+            determining where a conversation should go.
+        </p>
+
+    </div>
+
+
+    <div class="content-card">
+
+        <h2>Service Agent</h2>
+
+        <p>
+            The service agent is the person who handles
+            the customer conversation.
+        </p>
+
+        <p>
+            The agent needs the appropriate Salesforce
+            permissions, queue membership and Omni-Channel
+            configuration to receive routed conversations.
+        </p>
+
+    </div>
+
+
+    <div class="content-card highlight">
+
+        <h2>How Everything Connects</h2>
+
+        <p>
+            The basic Salesforce Web Chat architecture
+            can be understood as:
+        </p>
+
+        <div class="flow">
+
+            <div>Customer</div>
+
+            <span>→</span>
+
+            <div>Web Chat</div>
+
+            <span>→</span>
+
+            <div>Deployment</div>
+
+            <span>→</span>
+
+            <div>Routing</div>
+
+            <span>→</span>
+
+            <div>Queue</div>
+
+            <span>→</span>
+
+            <div>Omni-Channel</div>
+
+            <span>→</span>
+
+            <div>Agent</div>
+
+        </div>
+
+    </div>
+
+
+    <div class="content-card highlight">
+
+        <h2>What We Will Configure in TeleLab</h2>
+
+        <p>
+            In the upcoming hands-on labs, we will move
+            from concepts to an actual Salesforce Web Chat
+            configuration.
+        </p>
+
+        <ul>
+
+            <li>Create and configure a Web Chat deployment</li>
+
+            <li>Create a queue</li>
+
+            <li>Configure routing</li>
+
+            <li>Configure Omni-Channel</li>
+
+            <li>Assign agents</li>
+
+            <li>Embed Web Chat into a website</li>
+
+            <li>Test an actual customer conversation</li>
+
+        </ul>
+
+    </div>
+
+
+</section>
+
+
+<!-- ==========================
+     Page Navigation
+========================== -->
+
+<section class="page-navigation">
+
+    <a href="../fundamentals/">
+        ← Web Chat Fundamentals
+    </a>
+
+    <a href="../embedded-service/">
+        Next: Embedded Service →
+    </a>
+
+</section>
+
+
+<!-- ==========================
+     Footer
+========================== -->
+
+<footer>
+
+    © 2026 TeleLab.in
+
+</footer>
+
+
+</body>
+
+</html>
