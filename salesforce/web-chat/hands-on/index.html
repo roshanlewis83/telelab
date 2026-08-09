@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hands-on Web Chat Lab - TeleLab</title>
+
+    <link rel="stylesheet" href="../../../css/style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         Navigation
+    ========================== -->
+
+    <nav>
+
+        <div class="logo">
+
+            <a href="../../../index.html">TeleLab</a>
+
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="../../../index.html">Home</a>
+
+            <a href="../../index.html">Salesforce</a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =========================
+         Hero Section
+    ========================== -->
+
+    <section class="salesforce-hero">
+
+        <h1>Hands-on Web Chat Lab</h1>
+
+        <p>
+
+            Build and test a real Salesforce Enhanced Web Chat
+
+            experience and understand how customer conversations
+
+            reach service agents through Omni-Channel.
+
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================
+         Lab Content
+    ========================== -->
+
+    <main class="content">
+
+
+        <!-- Lab Overview -->
+
+        <section class="content-card highlight">
+
+            <h2>Lab Overview</h2>
+
+            <p>
+
+                In this hands-on lab, we will configure and test
+
+                Salesforce Enhanced Web Chat using queue-based
+
+                Omni-Channel routing.
+
+            </p>
+
+            <p>
+
+                The objective is to start a Web Chat as a customer
+
+                and verify that the conversation is delivered to an
+
+                available service agent through Omni-Channel.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- Architecture -->
+
+        <section class="content-card">
+
+            <h2>Web Chat Architecture</h2>
+
+            <p>
+
+                The lab uses the following simplified conversation
+
+                flow:
+
+            </p>
+
+
+            <div class="flow">
+
+                <span>Customer</span>
+
+                <span>→</span>
+
+                <span>Web Chat</span>
+
+                <span>→</span>
+
+                <span>Messaging Channel</span>
+
+                <span>→</span>
+
+                <span>Queue</span>
+
+                <span>→</span>
+
+                <span>Omni-Channel</span>
+
+                <span>→</span>
+
+                <span>Agent</span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Step 1 -->
+
+        <section class="content-card">
+
+            <h2>Lab 1 — Verify Enhanced Chat</h2>
+
+            <p>
+
+                Open Salesforce Setup and search for
+
+                <strong>Messaging Settings</strong>.
+
+            </p>
+
+            <ul>
+
+                <li>Verify that Messaging is enabled.</li>
+
+                <li>Verify that Enhanced Messaging is available.</li>
+
+                <li>Confirm that the Web Chat messaging channel exists.</li>
+
+            </ul>
+
+            <p>
+
+                In our Developer Org, the messaging channel is named
+
+                <strong>Customer Web Chat</strong>.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- Step 2 -->
+
+        <section class="content-card">
+
+            <h2>Lab 2 — Verify the Messaging Channel</h2>
+
+            <p>
+
+                Open the <strong>Customer Web Chat</strong> messaging
+
+                channel.
+
+            </p>
+
+            <ul>
+
+                <li>Channel Name: Customer Web Chat</li>
+
+                <li>Type: Embedded Messaging</li>
+
+                <li>Platform Type: Enhanced</li>
+
+                <li>Status: Active</li>
+
+            </ul>
+
+            <p>
+
+                The messaging channel connects the customer Web Chat
+
+                experience with Salesforce.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- Step 3 -->
+
+        <section class="content-card">
+
+            <h2>Lab 3 — Verify the Web Chat Deployment</h2>
+
+            <p>
+
+                Open the Embedded Service Deployment associated with
+
+                the Web Chat channel.
+
+            </p>
+
+            <ul>
+
+                <li>Deployment Name: Customer_Web_Chat</li>
+
+                <li>Deployment Type: Web</li>
+
+                <li>Client Version: WebV2</li>
+
+            </ul>
+
+            <p>
+
+                The deployment provides the Web Chat experience that
+
+                customers use to start a conversation.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- Step 4 -->
+
+        <section class="content-card">
+
+            <h2>Lab 4 — Configure Omni-Channel Routing</h2>
+
+            <p>
+
+                Open the messaging channel's Omni-Channel Routing
+
+                configuration.
+
+            </p>
+
+            <ul>
+
+                <li>Routing Type: Omni-Queue</li>
+
+                <li>Queue: Web Chat Queue</li>
+
+            </ul>
+
+            <p>
+
+                Omni-Queue routing allows Salesforce Omni-Channel to
+
+                determine which eligible agent should receive the
+
+                conversation.
+
+            </p>
+
+
+            <div class="flow">
+
+                <span>Web Chat</span>
+
+                <span>→</span>
+
+                <span>Web Chat Queue</span>
+
+                <span>→</span>
+
+                <span>Omni-Queue</span>
+
+                <span>→</span>
+
+                <span>Agent</span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Step 5 -->
+
+        <section class="content-card">
+
+            <h2>Lab 5 — Verify the Web Chat Queue</h2>
+
+            <p>
+
+                Open the Salesforce queue used by the messaging
+
+                channel.
+
+            </p>
+
+            <p>
+
+                Verify that the appropriate service agents are members
+
+                of the queue.
+
+            </p>
+
+            <p>
+
+                Queue membership is important because an agent who is
+
+                not a member of the queue is not normally eligible to
+
+                receive work from that queue.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- Step 6 -->
+
+        <section class="content-card">
+
+            <h2>Lab 6 — Prepare the Service Agent</h2>
+
+            <p>
+
+                Log in to the Salesforce Service Console as the
+
+                service agent.
+
+            </p>
+
+            <ul>
+
+                <li>Open the Omni-Channel utility.</li>
+
+                <li>Verify that the agent is logged in.</li>
+
+                <li>Set the Omni-Channel presence to
+
+                    <strong>Available</strong>.</li>
+
+                <li>Verify that the agent has available capacity.</li>
+
+            </ul>
+
+            <p>
+
+                Being logged into Salesforce alone does not make the
+
+                agent eligible for Web Chat.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- Step 7 -->
+
+        <section class="content-card highlight">
+
+            <h2>Lab 7 — Test the Customer Web Chat</h2>
+
+            <p>
+
+                Open the Enhanced Web Chat deployment's test page.
+
+            </p>
+
+            <ol>
+
+                <li>Open the Web Chat experience.</li>
+
+                <li>Start a new conversation.</li>
+
+                <li>Send a test message.</li>
+
+                <li>Keep the customer chat window open.</li>
+
+            </ol>
+
+            <p>
+
+                The conversation should now enter the configured
+
+                Salesforce routing process.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- Step 8 -->
+
+        <section class="content-card">
+
+            <h2>Lab 8 — Verify Omni-Channel</h2>
+
+            <p>
+
+                Return to the Salesforce Service Console.
+
+            </p>
+
+            <p>
+
+                Open the Omni-Channel utility and check the Inbox.
+
+            </p>
+
+            <p>
+
+                The Web Chat conversation should appear as incoming
+
+                work for the available agent.
+
+            </p>
+
+
+            <div class="flow">
+
+                <span>Customer Chat</span>
+
+                <span>→</span>
+
+                <span>Messaging Session</span>
+
+                <span>→</span>
+
+                <span>Omni-Channel</span>
+
+                <span>→</span>
+
+                <span>Agent</span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Step 9 -->
+
+        <section class="content-card">
+
+            <h2>Lab 9 — Verify the Messaging Session</h2>
+
+            <p>
+
+                Salesforce creates a Messaging Session for the
+
+                customer conversation.
+
+            </p>
+
+            <p>
+
+                Open the Messaging Session and verify that the
+
+                conversation is associated with the Web Chat channel.
+
+            </p>
+
+            <p>
+
+                This provides a useful way to confirm that the
+
+                customer's Web Chat request reached Salesforce.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- What We Successfully Tested -->
+
+        <section class="content-card highlight">
+
+            <h2>What We Successfully Tested</h2>
+
+            <p>
+
+                In our Salesforce Developer Org, we successfully
+
+                verified the basic Enhanced Web Chat routing path.
+
+            </p>
+
+            <ul>
+
+                <li>Enhanced Messaging is enabled.</li>
+
+                <li>Customer Web Chat messaging channel is active.</li>
+
+                <li>Customer_Web_Chat deployment is available.</li>
+
+                <li>Omni-Queue routing is configured.</li>
+
+                <li>Web Chat Queue is configured.</li>
+
+                <li>Agent presence is Available.</li>
+
+                <li>Customer Web Chat was started successfully.</li>
+
+                <li>A Messaging Session was created.</li>
+
+                <li>The chat request appeared in Omni-Channel.</li>
+
+            </ul>
+
+        </section>
+
+
+
+        <!-- Troubleshooting -->
+
+        <section class="content-card">
+
+            <h2>Lab 10 — Troubleshooting</h2>
+
+            <p>
+
+                If a Web Chat request does not appear in Omni-Channel,
+
+                check the following components in order:
+
+            </p>
+
+            <ol>
+
+                <li>Messaging is enabled.</li>
+
+                <li>The messaging channel is active.</li>
+
+                <li>The Embedded Service deployment is active.</li>
+
+                <li>The routing type is correctly configured.</li>
+
+                <li>The correct queue is selected.</li>
+
+                <li>The agent is a member of the queue.</li>
+
+                <li>The agent's Omni-Channel presence is Available.</li>
+
+                <li>The agent has sufficient capacity.</li>
+
+                <li>The customer Web Chat deployment is working.</li>
+
+            </ol>
+
+        </section>
+
+
+
+        <!-- Final Flow -->
+
+        <section class="content-card">
+
+            <h2>Complete Web Chat Flow</h2>
+
+            <div class="flow">
+
+                <span>Customer</span>
+
+                <span>→</span>
+
+                <span>Enhanced Web Chat</span>
+
+                <span>→</span>
+
+                <span>Messaging Channel</span>
+
+                <span>→</span>
+
+                <span>Routing</span>
+
+                <span>→</span>
+
+                <span>Queue</span>
+
+                <span>→</span>
+
+                <span>Omni-Channel</span>
+
+                <span>→</span>
+
+                <span>Agent</span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Page Navigation -->
+
+        <section class="page-navigation">
+
+            <a href="../agent/">
+
+                ← Agent Experience
+
+            </a>
+
+            <a href="../../index.html">
+
+                Back to Salesforce →
+
+            </a>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         Footer
+    ========================== -->
+
+    <footer>
+
+        © 2026 TeleLab.in
+
+    </footer>
+
+
+</body>
+
+</html>
