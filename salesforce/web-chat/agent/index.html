@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Web Chat Agent - TeleLab</title>
+
+    <link rel="stylesheet" href="../../../css/style.css">
+
+</head>
+
+<body>
+
+    <!-- =========================
+         Navigation
+         ========================= -->
+
+    <nav>
+
+        <div class="logo">
+
+            <a href="../../../index.html">
+                TeleLab
+            </a>
+
+        </div>
+
+        <div class="nav-links">
+
+            <a href="../../../index.html">
+                Home
+            </a>
+
+            <a href="../">
+                Web Chat
+            </a>
+
+            <a href="../../../salesforce/">
+                Salesforce
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================
+         Hero
+         ========================= -->
+
+    <header class="hero">
+
+        <h1>Web Chat Agent</h1>
+
+        <p>
+            Understand how Salesforce service agents become eligible
+            to receive Web Chat conversations through Omni-Channel.
+        </p>
+
+    </header>
+
+
+    <!-- =========================
+         Main Content
+         ========================= -->
+
+    <main class="content">
+
+
+        <!-- =========================
+             What is a Service Agent?
+             ========================= -->
+
+        <section class="content-card">
+
+            <h2>What is a Service Agent?</h2>
+
+            <p>
+                A service agent is the person who handles customer
+                conversations and provides assistance to customers.
+            </p>
+
+            <p>
+                In Salesforce, an agent can receive customer work
+                through Omni-Channel when the required configuration
+                and availability conditions are satisfied.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             How an Agent Receives Web Chat
+             ========================= -->
+
+        <section class="content-card">
+
+            <h2>How an Agent Receives Web Chat</h2>
+
+            <p>
+                A Web Chat conversation is not normally sent directly
+                to a specific agent. Salesforce evaluates the routing
+                configuration and determines which eligible agent
+                should receive the conversation.
+            </p>
+
+            <div class="flow">
+
+                <span>Customer</span>
+
+                <span class="flow-arrow">→</span>
+
+                <span>Web Chat</span>
+
+                <span class="flow-arrow">→</span>
+
+                <span>Routing</span>
+
+                <span class="flow-arrow">→</span>
+
+                <span>Queue</span>
+
+                <span class="flow-arrow">→</span>
+
+                <span>Omni-Channel</span>
+
+                <span class="flow-arrow">→</span>
+
+                <span>Agent</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             Agent Eligibility
+             ========================= -->
+
+        <section class="content-card">
+
+            <h2>Agent Eligibility</h2>
+
+            <p>
+                An agent must meet the required conditions before
+                Salesforce can deliver a Web Chat conversation.
+            </p>
+
+            <p>
+                These conditions can include queue membership,
+                Omni-Channel presence and available capacity.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             Queue Membership
+             ========================= -->
+
+        <section class="content-card">
+
+            <h2>Queue Membership</h2>
+
+            <p>
+                The agent must be a member of the queue that receives
+                the Web Chat conversation.
+            </p>
+
+            <p>
+                Queue membership identifies which agents are eligible
+                to handle the type of work assigned to that queue.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             Omni-Channel Presence
+             ========================= -->
+
+        <section class="content-card">
+
+            <h2>Omni-Channel Presence</h2>
+
+            <p>
+                Omni-Channel presence indicates whether an agent is
+                available to receive new work.
+            </p>
+
+            <p>
+                If an agent is offline, unavailable or otherwise not
+                eligible to receive work, Omni-Channel will not normally
+                deliver a new Web Chat conversation to that agent.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             Agent Capacity
+             ========================= -->
+
+        <section class="content-card">
+
+            <h2>Agent Capacity</h2>
+
+            <p>
+                Omni-Channel can consider the amount of work an agent
+                is already handling when determining whether the agent
+                can receive another conversation.
+            </p>
+
+            <p>
+                Capacity helps prevent an agent from being assigned
+                more work than they are configured to handle.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             When the Agent Receives the Chat
+             ========================= -->
+
+        <section class="content-card">
+
+            <h2>When the Agent Receives the Chat</h2>
+
+            <p>
+                When an eligible agent is available, Omni-Channel can
+                deliver the Web Chat conversation to that agent.
+            </p>
+
+            <p>
+                The agent can then accept the work and begin
+                communicating with the customer.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             Agent and Omni-Channel
+             ========================= -->
+
+        <section class="content-card">
+
+            <h2>Agent and Omni-Channel</h2>
+
+            <p>
+                Omni-Channel acts as the delivery mechanism between
+                customer work and available service agents.
+            </p>
+
+            <p>
+                The queue identifies the group of agents who can handle
+                the work, while Omni-Channel determines which eligible
+                agent should receive it.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             What We Will Configure
+             ========================= -->
+
+        <section class="content-card highlight">
+
+            <h2>What We Will Configure in TeleLab</h2>
+
+            <p>
+                In the hands-on labs, we will configure a service agent
+                so that the agent can receive Web Chat conversations.
+            </p>
+
+            <ul>
+
+                <li>Create or use a Salesforce service agent</li>
+
+                <li>Add the agent to the Web Chat queue</li>
+
+                <li>Configure Omni-Channel access</li>
+
+                <li>Configure agent presence</li>
+
+                <li>Understand agent capacity</li>
+
+                <li>Test Web Chat delivery to the agent</li>
+
+                <li>Observe the conversation in Salesforce</li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- =========================
+             Page Navigation
+             ========================= -->
+
+        <section class="page-navigation">
+
+            <a href="../queue/">
+                ← Web Chat Queue
+            </a>
+
+            <a href="../">
+                Back to Web Chat →
+            </a>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================
+         Footer
+         ========================= -->
+
+    <footer>
+
+        © 2026 TeleLab.in
+
+    </footer>
+
+</body>
+
+</html>
