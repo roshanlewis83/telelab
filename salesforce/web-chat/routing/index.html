@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Omni-Channel Routing - TeleLab</title>
+
+    <link rel="stylesheet" href="../../../css/style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ==========================
+     Navigation
+========================== -->
+
+<nav>
+
+    <div class="logo">
+
+        <a href="../../../index.html">
+            TeleLab
+        </a>
+
+    </div>
+
+
+    <div class="nav-links">
+
+        <a href="../../../index.html">
+            Home
+        </a>
+
+        <a href="../../index.html">
+            Web Chat
+        </a>
+
+        <a href="../../../salesforce/index.html">
+            Salesforce
+        </a>
+
+    </div>
+
+</nav>
+
+
+
+<!-- ==========================
+     Page Header
+========================== -->
+
+<section class="hero">
+
+    <h1>Omni-Channel Routing</h1>
+
+    <p>
+        Understand how Salesforce routes Web Chat conversations
+        from customers to the appropriate service agents.
+    </p>
+
+</section>
+
+
+
+<!-- ==========================
+     Main Content
+========================== -->
+
+<section class="content">
+
+
+    <div class="content-card">
+
+        <h2>What is Omni-Channel Routing?</h2>
+
+        <p>
+            Salesforce Omni-Channel is responsible for routing
+            customer conversations and other work items to
+            available service agents.
+        </p>
+
+        <p>
+            For Web Chat, Omni-Channel helps determine which
+            agent should receive a customer conversation based
+            on the configured routing setup.
+        </p>
+
+    </div>
+
+
+
+    <div class="content-card">
+
+        <h2>Why Routing is Important</h2>
+
+        <p>
+            A customer conversation needs to reach the right
+            service agent efficiently.
+        </p>
+
+        <p>
+            Routing configuration determines how Salesforce
+            handles the work and which agents are eligible
+            to receive it.
+        </p>
+
+    </div>
+
+
+
+    <div class="content-card">
+
+        <h2>Queue</h2>
+
+        <p>
+            A queue represents a group of agents who can handle
+            a particular type of customer conversation.
+        </p>
+
+        <p>
+            When a conversation is routed to a queue, Salesforce
+            can look for an available agent who is a member of
+            that queue.
+        </p>
+
+    </div>
+
+
+
+    <div class="content-card">
+
+        <h2>Routing Configuration</h2>
+
+        <p>
+            Routing configuration determines how work is
+            assigned to service agents.
+        </p>
+
+        <p>
+            It can define factors such as priority, routing
+            model and the amount of work an agent can receive.
+        </p>
+
+    </div>
+
+
+
+    <div class="content-card">
+
+        <h2>Agent Availability</h2>
+
+        <p>
+            An agent must be available and properly configured
+            to receive a routed Web Chat conversation.
+        </p>
+
+        <p>
+            Queue membership, Omni-Channel presence and the
+            agent's capacity can affect whether the agent
+            can receive new work.
+        </p>
+
+    </div>
+
+
+
+    <div class="content-card">
+
+        <h2>How the Routing Process Works</h2>
+
+        <p>
+            A simplified Web Chat routing process can be
+            represented as:
+        </p>
+
+
+        <div class="flow">
+
+            <div>Customer</div>
+
+            <span>→</span>
+
+            <div>Web Chat</div>
+
+            <span>→</span>
+
+            <div>Routing</div>
+
+            <span>→</span>
+
+            <div>Queue</div>
+
+            <span>→</span>
+
+            <div>Omni-Channel</div>
+
+            <span>→</span>
+
+            <div>Agent</div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="content-card">
+
+        <h2>What Happens When an Agent is Available?</h2>
+
+        <p>
+            When an eligible agent is available, Omni-Channel
+            can deliver the conversation to that agent.
+        </p>
+
+        <p>
+            The agent can then accept the work and begin
+            communicating with the customer.
+        </p>
+
+    </div>
+
+
+
+    <div class="content-card highlight">
+
+        <h2>What We Will Configure in TeleLab</h2>
+
+        <p>
+            In the upcoming hands-on labs, we will configure
+            the components required to route a Web Chat
+            conversation to an agent.
+        </p>
+
+        <ul>
+
+            <li>Create a Web Chat queue</li>
+
+            <li>Create and configure routing</li>
+
+            <li>Configure Omni-Channel</li>
+
+            <li>Assign agents to the queue</li>
+
+            <li>Configure agent presence</li>
+
+            <li>Test Web Chat routing</li>
+
+            <li>Observe the conversation in Salesforce</li>
+
+        </ul>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- ==========================
+     Page Navigation
+========================== -->
+
+<section class="page-navigation">
+
+    <a href="../embedded-service/">
+        ← Embedded Service
+    </a>
+
+    <a href="../">
+        Back to Web Chat →
+    </a>
+
+</section>
+
+
+
+<!-- ==========================
+     Footer
+========================== -->
+
+<footer>
+
+    © 2026 TeleLab.in
+
+</footer>
+
+
+</body>
+
+</html>
