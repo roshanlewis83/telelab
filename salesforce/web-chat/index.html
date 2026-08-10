@@ -179,6 +179,27 @@
 
     </footer>
 
+    <script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+
+			embeddedservice_bootstrap.init(
+				'00Dbm00000r4Dkv',
+				'Customer_Web_Chat',
+				'https://orgfarm-224685c77e-dev-ed.develop.my.site.com/ESWCustomerWebChat1785598660035',
+				{
+					scrt2URL: 'https://orgfarm-224685c77e-dev-ed.develop.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://orgfarm-224685c77e-dev-ed.develop.my.site.com/ESWCustomerWebChat1785598660035/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+
+
 </body>
 
 </html>
